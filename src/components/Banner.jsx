@@ -1,5 +1,5 @@
 import banner from "../files/herotexture.webp";
-import downloadFile from "../files/download.png";
+import downloadFile from "../files/resume.pdf";
 import * as icons from "../files/icons";
 import { useState } from "react";
 
@@ -7,12 +7,12 @@ const CONTENT = {
   subtitle: "Hi, i'm",
   title: "Franco Cherubini",
   paragraph: [
-    "Mostly code, often design, and like to do automation tasks in apps.  Ussually work with React, Electron and Node.",
+    "Mostly code, often design, and like to do automation tasks in apps.  Ussually work with React, Electron and Node. Currently learning C++",
   ],
 };
 export default function Banner() {
   return (
-    <section id="banner" className="w-full">
+    <section id="banner" className="w-full p-6">
       <div
         className={
           "flex flex-row justify-around items-center flex-wrap w-full h-[700px] bg-contain"
@@ -32,13 +32,13 @@ export default function Banner() {
           </p>
 
           <div className="py-3">
-            <a className="inline-flex items-center gap-2 p-2">
+            <a className="inline-flex items-center gap-2 p-2 hover:text-mainacc transition duration-400" href="http://github.com/cherubinifranco" target="_blank">
               {icons.githubicon}
             </a>
-            <a className="inline-flex items-center gap-2 p-2">
+            <a className="inline-flex items-center gap-2 p-2 hover:text-mainacc transition duration-400" href="http://linkedin.com/in/cherubinifranco" target="_blank">
               {icons.linkedinIcon}
             </a>
-            <a className="inline-flex items-center gap-2 p-2">
+            <a className="inline-flex items-center gap-2 p-2 hover:text-mainacc transition duration-400" href="mailto:cherubini.franco@hotmail.com" target="_blank">
               {icons.emailIcon} 
             </a>
           </div>

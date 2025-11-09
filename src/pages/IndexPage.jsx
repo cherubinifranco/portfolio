@@ -8,7 +8,7 @@ import TimeLine from "../components/TimeLine";
 
 export default function IndexPage(){
     
-    return (<main>
+    return (<main className="overflow-hidden">
         <Navbar />
         <Banner />
         <TimeLine />
