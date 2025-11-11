@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { projectIcons, bchMapIcon, beanItIcon, bingoIcon, brackets, externalLink } from "../files/icons";
+import {
+  projectIcons,
+  bchMapIcon,
+  beanItIcon,
+  bingoIcon,
+  brackets,
+  externalLink,
+} from "../files/icons";
 import RevealOnScroll from "./RevealOnScroll";
 const PROJECTS = [
   {
@@ -9,8 +16,9 @@ const PROJECTS = [
       "App designed to send emails based on an Excel file (XSLX)",
       "It comes with 4 message presets and the ability to use variables based on the columns of the file",
     ],
-    url: "https://www.youtube.com/embed/FNNvUP2ocR4?si=bFc7XGzRQ5cl4wto",
+    url: "beanit",
     repository: "https://github.com/cherubinifranco/beanit",
+    img: "",
   },
   {
     icon: bchMapIcon,
@@ -19,7 +27,7 @@ const PROJECTS = [
       "Interactive map with custom markers that displays business that accept BCH as a form of payment",
       "Made for Bitcoin Cash Argentina, so there is no public repository",
     ],
-    url: "https://www.youtube.com/embed/2wfahAD_kWQ?si=egT0wqLo_GbvcDvG",
+    url: "bchmap",
     repository: "",
   },
   {
@@ -27,19 +35,14 @@ const PROJECTS = [
     title: "Bingo Maker",
     paragraphs: [
       "One of my first projects. It's not that complicated, and it's not that good.",
-      "Still works as it was design to do so. Custom images for your bingo nights"
+      "Still works as it was design to do so. Custom images for your bingo nights",
     ],
-    url: "https://www.youtube.com/embed/JMzoBcPpwhk?si=4czaW_fmFzIlsMlM",
+    url: "bingomaker",
     repository: "https://github.com/cherubinifranco/bingomaker",
   },
 ];
 
 export default function Projects() {
-  const [eggStatus, updateEgg] = useState(false);
-  useEffect(() => {
-    const eggStatus = localStorage.getItem("egg") ?? false;
-    updateEgg(eggStatus);
-  }, []);
   return (
     <section id="#projects" className="text-alwhite">
       <h1 className="poppins-bold w-full text-center text-alwhite text-3xl py-12">
@@ -73,17 +76,17 @@ export default function Projects() {
                         {par}
                       </p>
                     ))}
-                    {
-                      project.repository ? 
-                      (<a
-                      href={project.repository}
-                      target="_blank"
-                      className="mt-3 inline-flex gap-2 text-sm hover:underline"
+                    {project.repository ? (
+                      <a
+                        href={project.repository}
+                        target="_blank"
+                        className="mt-3 inline-flex gap-2 text-sm hover:underline"
                       >
-                      Open repo {externalLink}
-                    </a>)
-                    : ""
-                    }
+                        Open repo {externalLink}
+                      </a>
+                    ) : (
+                      ""
+                    )}
                   </div>
                   <div className="flex flex-row justify-between">
                     <div className="">{brackets.bl}</div>
@@ -97,13 +100,15 @@ export default function Projects() {
                   <div className="">{brackets.tl}</div>
                   <div className="0">{brackets.tr}</div>
                 </div>
-                <iframe
-                  className="mx-6 w-96 h-60"
-                  id="ytplayer"
-                  type="text/html"
-                  src={project.url}
-                  frameborder="0"
-                />
+                <div className="mx-6 w-96 h-60 flex flex-col items-center justify-center">
+                  <img src="" alt="" className="w-80 h-52"/>
+                  <a
+                    href={project.url}
+                    className="mt-3 inline-flex gap-2 text-sm hover:underline p-2 px-4"
+                  >
+                    See project
+                  </a>
+                </div>
                 <div className="flex flex-row justify-between">
                   <div className="">{brackets.bl}</div>
                   <div className="0">{brackets.br}</div>
@@ -113,15 +118,6 @@ export default function Projects() {
           </article>
         </RevealOnScroll>
       ))}
-      {eggStatus && (
-        <iframe
-          className="w-[800px] h-[400px] mx-auto py-6"
-          id="ytplayer"
-          type="text/html"
-          src="https://tbot.xyz/lumber/"
-          frameborder="0"
-        />
-      )}
     </section>
   );
 }
