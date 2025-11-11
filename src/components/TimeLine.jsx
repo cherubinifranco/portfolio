@@ -1,35 +1,28 @@
+/** @format */
+
 const JOBS = [
   {
-    startDate: "Dec. 2020",
+    startDate: "Sep. 2025",
     finishDate: "Present",
-    title: "Full Stack Developer",
-    place: "University of Nebraska-Lincoln",
+    title: "Network Monitoring Analyst",
+    place: "Tecnored Latam",
     description:
-      "Full-stack (.NET Core, Java, MySQL, AWS) software development, dev team leading & systems design consulting.",
+      "Monitored one of Argentina’s largest network infrastructures, ensuring stability and continuity through proactive incident reporting and support.",
   },
   {
-    startDate: "Dec. 2018",
+    startDate: "Oct. 2024",
     finishDate: "Present",
-    title: "Software Developer",
-    place: "Alpha Group 2000",
-    description:
-      "Software development, mostly on .NET, including, ASP.NET/Core, RESTful APIs, Xamarin, Winforms, tons of microservices and fun stuff.",
+    title: "Freelance",
+    place: "Fiverr",
+    description: "Developed cross platform desktop applications, integrating web and native technologies, automating real-time data processes, and connnecting hardware for production enviroments"
   },
   {
-    startDate: "March 2016",
-    finishDate: "Present",
-    title: "Freelance Software Developer",
-    place: "Independant Profesional",
+    startDate: "Jan. 2023",
+    finishDate: "Sep. 2025",
+    title: "General IT Technician",
+    place: "Unit 11 – Piñero Maximum-Security Prison",
     description:
-      "Full-stack software development and general IT consulting, especially around optimization and automation of processes.",
-  },
-  {
-    startDate: "Aug. 2017",
-    finishDate: "Dec. 2018",
-    title: "Help Desk Technician",
-    place: "Atento",
-    description:
-      "Remote help desk support for one of the largest telecom companies in Argentina. Issues were broad, ranging from VoIP and Internet/Wi-Fi, to general networking and router config, CATV, DTV, UHF TV.",
+      "Installation and support of CCTV and IP telephony systems, internal auditing, and general maintenance of various systems", 
   },
 ];
 
@@ -38,30 +31,16 @@ import RevealOnScroll from "./RevealOnScroll";
 export default function TimeLine() {
   return (
     <section id="timeline" className="pt-8">
-      <h1 className="poppins-bold w-full text-center text-alwhite text-3xl py-12">
-        Work Experience
-      </h1>
+      <h1 className="poppins-bold w-full text-center text-alwhite text-3xl py-12">Work Experience</h1>
       {JOBS.map((el, index) => (
         <RevealOnScroll>
           <article
-            className={
-              "w-full flex justify-center " +
-              (index % 2 == 0 ? "flex-row" : "flex-row-reverse")
-            }
+            className={"w-full flex justify-center " + (index % 2 == 0 ? "flex-row" : "flex-row-reverse")}
             key={index + el.startDate}
           >
-            <div
-              className={
-                "w-80 flex-col flex " +
-                (index % 2 == 0 ? "items-end text-right" : "items-start")
-              }
-            >
-              <span className="text-thirdbg text-xs pb-2">
-                {el.startDate + " - " + el.finishDate}
-              </span>
-              <h2 className="text-alwhite text-xl poppins-bold letter tracking-wide py-2">
-                {el.title}
-              </h2>
+            <div className={"w-80 flex-col flex " + (index % 2 == 0 ? "items-end text-right" : "items-start")}>
+              <span className="text-thirdbg text-xs pb-2">{el.startDate + " - " + el.finishDate}</span>
+              <h2 className="text-alwhite text-xl poppins-bold letter tracking-wide py-2">{el.title}</h2>
               <p className="text-thirdbg text-sm">{el.place}</p>
               <p className="text-alwhite py-3">{el.description}</p>
             </div>

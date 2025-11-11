@@ -1,7 +1,6 @@
 import banner from "../files/herotexture.webp";
 import downloadFile from "../files/resume.pdf";
 import * as icons from "../files/icons";
-import { useState } from "react";
 
 const CONTENT = {
   subtitle: "Hi, i'm",

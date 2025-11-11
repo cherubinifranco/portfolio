@@ -1,36 +1,36 @@
 import { useEffect, useState } from "react";
-import { projectIcons, brackets, externalLink } from "../files/icons";
+import { projectIcons, bchMapIcon, beanItIcon, bingoIcon, brackets, externalLink } from "../files/icons";
 import RevealOnScroll from "./RevealOnScroll";
 const PROJECTS = [
   {
-    icon: projectIcons.gitsharp,
-    title: "Git-in-CSharp",
+    icon: beanItIcon,
+    title: "Bean It",
     paragraphs: [
-      "The objective of this project is to build a barebones version of Git with teachinf porpouse.",
-      "In the stream we talk about books related to git, howgit works, and how to build your own file tracker system.",
+      "App designed to send emails based on an Excel file (XSLX)",
+      "It comes with 4 message presets and the ability to use variables based on the columns of the file",
     ],
     url: "https://www.youtube.com/embed/FNNvUP2ocR4?si=bFc7XGzRQ5cl4wto",
-    repository: "https://github.com/MarianoVilla/Git-In-CSharp",
+    repository: "https://github.com/cherubinifranco/beanit",
   },
   {
-    icon: projectIcons.dnssharp,
-    title: "DNS-Server",
+    icon: bchMapIcon,
+    title: "Bitcoin Cash Map",
     paragraphs: [
-      "This project aims to teach every part of a DNS server and how to build one.",
-      "How to build a DNS is a playlist of 5 videos that discuss things like: DNS protocol, DNS structure, Hierarchy, Headers, Questions, Responses and more.",
+      "Interactive map with custom markers that displays business that accept BCH as a form of payment",
+      "Made for Bitcoin Cash Argentina, so there is no public repository",
     ],
     url: "https://www.youtube.com/embed/2wfahAD_kWQ?si=egT0wqLo_GbvcDvG",
-    repository: "https://github.com/MarianoVilla/DNS-Server",
+    repository: "",
   },
   {
-    icon: projectIcons.cubevsia,
-    title: "WorldHardesGame-vs-AI",
+    icon: bingoIcon,
+    title: "Bingo Maker",
     paragraphs: [
-      "What happens when you put AI to compete with the World Hardest Game? You learn how AI works.",
-      "In this video we talk about Genetic Algorithm in AI, Single Point Crossover, Mutation and Elitism.",
+      "One of my first projects. It's not that complicated, and it's not that good.",
+      "Still works as it was design to do so. Custom images for your bingo nights"
     ],
     url: "https://www.youtube.com/embed/JMzoBcPpwhk?si=4czaW_fmFzIlsMlM",
-    repository: "https://github.com/MarianoVilla/WorldHardestGame-vs-AI",
+    repository: "https://github.com/cherubinifranco/bingomaker",
   },
 ];
 
@@ -73,13 +73,17 @@ export default function Projects() {
                         {par}
                       </p>
                     ))}
-                    <a
+                    {
+                      project.repository ? 
+                      (<a
                       href={project.repository}
                       target="_blank"
                       className="mt-3 inline-flex gap-2 text-sm hover:underline"
-                    >
+                      >
                       Open repo {externalLink}
-                    </a>
+                    </a>)
+                    : ""
+                    }
                   </div>
                   <div className="flex flex-row justify-between">
                     <div className="">{brackets.bl}</div>
