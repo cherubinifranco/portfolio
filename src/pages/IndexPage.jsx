@@ -13,7 +13,7 @@ export default function IndexPage(){
         <Banner />
         <TimeLine />
         <Projects />
-        <About />
+        {/* <About /> */}
         <Footer />
     </main>)
 }
