@@ -1,9 +1,3 @@
-/** @format */
-
-import music1 from "../files/music1.png";
-import music2 from "../files/music2.png";
-import gato1 from "../files/gato1.png";
-import gato2 from "../files/gato2.png";
 import RevealOnScroll from "./RevealOnScroll";
 
 const CONTENT = {
