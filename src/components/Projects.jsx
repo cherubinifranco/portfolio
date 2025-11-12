@@ -104,7 +104,7 @@ export default function Projects() {
                   <img src="" alt="" className="w-80 h-52"/>
                   <a
                     href={project.url}
-                    className="mt-3 inline-flex gap-2 text-sm hover:underline p-2 px-4"
+                    className="mt-3 inline-flex gap-2 text-sm hover:underline p-3 px-5"
                   >
                     See project
                   </a>

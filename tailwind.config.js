@@ -14,9 +14,6 @@ module.exports = {
 				instagram: "#e4405f",
 			}
 		},
-		screens: {
-			"mmd": "720px"
-		}
 	},
 	plugins: [],
 }
