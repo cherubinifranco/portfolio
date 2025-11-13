@@ -6,7 +6,7 @@ const CONTENT = {
   subtitle: "Hi, i'm",
   title: "Franco Cherubini",
   paragraph: [
-    "Mostly code, often design, and like to do automation tasks in apps.  Ussually work with React, Electron and Node. Currently learning C++",
+    "Mostly code, sometimes design. I build apps that automate things. I work with React, Electron, and Node, and I'm currently exploring C++.",
   ],
 };
 export default function Banner() {
