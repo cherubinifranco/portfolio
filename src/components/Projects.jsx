@@ -1,6 +1,3 @@
-/** @format */
-
-import { useEffect, useState } from "react";
 import { projectIcons, bchMapIcon, beanItIcon, bingoIcon, brackets, externalLink } from "../files/icons";
 import RevealOnScroll from "./RevealOnScroll";
 const PROJECTS = [
@@ -40,7 +37,7 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="text-alwhite">
+    <section id="projects" className="text-alwhite pt-8">
       <h1 className="poppins-bold w-full text-center text-alwhite text-3xl py-12">Featured Projects</h1>
 
       {PROJECTS.map((project, index) => (
