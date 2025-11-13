@@ -1,5 +1,3 @@
-import { WORKLINKS, MEDIALINKS, SOCIALLINKS, MUSICLINKS } from "../data";
-
 export default function Footer() {
   return (
     <section
