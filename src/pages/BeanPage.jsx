@@ -1,7 +1,9 @@
-import BreadCrumbs from "../components/BreadCrumbs";
-
-const proyectInfo = {
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import ProjectHero from "../components/ProjectHero";
+const projectInfo = {
   name: "Bean It",
+  url: "/beanit",
   description: "Automated Email Sender from Excel Data",
   overview:
     "Bean It is a desktop application that automates bulk email delivery based on .xlsx spreadsheets. It reads structured data and generates personalized messages using variable placeholders linked to each column, making it ideal for small businesses or teams that need quick, personalized communication.",
@@ -31,21 +33,10 @@ Preview or send screen – gives an idea of the workflow.
 
 export default function BeanItPage() {
   return (
-    <main className="flex flex-col items-center">
-    <section className="flex flex-col w-full flex-wrap">
-        <BreadCrumbs
-          links={[
-            { name: "Proyects", url: "/proyects" },
-            { name: "Bean It", url: "/beanit" },
-          ]}
-        />
-
-      <div>
-        <h1>Bean It</h1>
-
-      </div>
-      <img src="./assets/beanit-hero.png" alt="Bean It Hero Image" className="w-80 h-80"/>
-    </section>
+    <main className="overflow-hidden text-white">
+      <Navbar />
+      <ProjectHero projectInfo={projectInfo}/>
+      <Footer/>
     </main>
   );
 }
