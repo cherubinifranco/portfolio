@@ -19,7 +19,7 @@ export default function ProjectHero({
   },
 }) {
   return (
-    <section className="flex flex-col md:flex-row w-full flex-wrap justify-between mt-1 md:mt-32 px-8 max-w-[1400px] mx-auto pb-10">
+    <section className="flex flex-col md:flex-row w-full flex-wrap justify-between mt-1 md:mt-28 px-8 max-w-[1400px] mx-auto pb-10">
       <div className="flex flex-col justify-between p-4 md:pr-10 w-full md:w-1/2 gap-8">
         <div className="ml-6 md:ml-0">
           <BreadCrumbs
