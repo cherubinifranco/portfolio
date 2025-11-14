@@ -1,5 +1,3 @@
-/** @format */
-
 const links = [
   {
     name: "Home",
@@ -21,7 +19,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
-    return () => (document.body.style.overflow = "auto"); // cleanup on unmount
+    return () => (document.body.style.overflow = "auto");
   }, [isOpen]);
 
   useEffect(() => {
@@ -78,5 +76,3 @@ export default function Navbar() {
     </div>
   );
 }
-
-// Add burger functionality
