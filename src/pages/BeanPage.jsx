@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProjectHero from "../components/ProjectHero";
+import { doublesquareIcon } from "../files/icons";
 const projectInfo = {
   name: "Bean It",
   url: "/beanit",
@@ -35,8 +36,19 @@ export default function BeanItPage() {
   return (
     <main className="overflow-hidden text-white">
       <Navbar />
-      <ProjectHero projectInfo={projectInfo}/>
-      <Footer/>
+      <ProjectHero projectInfo={projectInfo} />
+      <section className="flex flex-col w-full mt-32 px-12 max-w-[1400px] mx-auto pb-10">
+        <h1 className="text-4xl pb-10">Features</h1>
+        <div className="">
+          {projectInfo.features.map((feature) => (
+            <article className="py-5 flex gap-4 text-blue-400">
+              {doublesquareIcon}
+              <span className="text-white">{feature}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+      <Footer />
     </main>
   );
 }

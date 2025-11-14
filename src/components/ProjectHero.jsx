@@ -15,11 +15,11 @@ export default function ProjectHero({
     ],
     stack: ["Name", "Your", "Stack", "Technologies"],
     role: "Explain what you did in this project, of couse you did everything. But make it sound preatty",
-    imgs: ["../assets/beanit-hero.png"],
+    imgs: ["./assets/beanit-hero.png"],
   },
 }) {
   return (
-    <section className="flex flex-col md:flex-row w-full flex-wrap justify-between mt-1 md:mt-32 px-8 max-w-[1400px] mx-auto">
+    <section className="flex flex-col md:flex-row w-full flex-wrap justify-between mt-1 md:mt-32 px-8 max-w-[1400px] mx-auto pb-10">
       <div className="flex flex-col justify-between p-4 md:pr-10 w-full md:w-1/2 gap-8">
         <div className="ml-6 md:ml-0">
           <BreadCrumbs
@@ -50,7 +50,7 @@ export default function ProjectHero({
         </div>
         <span></span>
       </div>
-      <img src="./assets/beanit-hero.png" alt="Bean It Hero Image" className="md:w-1/2 rounded-xl object-contain" />
+      <img src="./assets/beanit-hero.png" alt="Bean It Hero Image" className="md:w-1/2 rounded-xl object-contain transition duration-700 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]" />
     </section>
   );
 }
