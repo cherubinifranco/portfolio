@@ -11,15 +11,34 @@ export default function Card({
 }) {
   return (
     <a
-      href={"https://" + cardDetail.url}
-      target="_blank"
-      className="min-w-80 bg-secondbg max-w-80 rounded-lg flex flex-col items-center gap-6 py-4 pb-8 border border-gray-700 transition duration-300 hover:-translate-y-10 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
-    >
-      <div className="h-40 w-40 text-blue-100">{cardDetail.icon}</div>
-      <h1 className="text-3xl text-blue-500 w-full text-center border-t border-gray-700 pt-6">
-        {cardDetail.title}
-      </h1>
-      <p className="px-6 text-gray-200">{cardDetail.description}</p>
-    </a>
+  href={"https://" + cardDetail.url}
+  target="_blank"
+  className="
+    min-w-80 max-w-80 
+    bg-secondbg/70 backdrop-blur-md
+    rounded-2xl 
+    flex flex-col items-center 
+    gap-6 
+    py-8 
+    border border-gray-700/50 
+    transition-all duration-300 
+    hover:-translate-y-2 
+    hover:border-blue-600/50 
+    hover:shadow-[0_8px_25px_rgba(0,0,0,0.4)]
+  "
+>
+  <div className="h-28 w-28 text-blue-100 flex items-center justify-center">
+    {cardDetail.icon}
+  </div>
+
+  <h1 className="text-2xl font-semibold text-blue-400 pt-4">
+    {cardDetail.title}
+  </h1>
+
+  <p className="px-6 text-gray-300 text-sm leading-relaxed text-center">
+    {cardDetail.description}
+  </p>
+</a>
+
   );
 }
