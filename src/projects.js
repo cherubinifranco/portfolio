@@ -15,6 +15,8 @@ export const beanIt = {
     "Built as a cross-platform desktop app using modern web technologies.",
   ],
   stack: ["React", "Electron", "NodeJs", "Tailwind"],
+  img: "../assets/beanit-1.png",
+  imgfeatures: "",
   imgs: [""],
   cards: [
     {
@@ -30,8 +32,7 @@ export const beanIt = {
       icon: cardIcons.download,
       url: "github.com/cherubinifranco/beanit/releases/latest",
       title: "Try the app",
-      description:
-        "If you found this project useful or want to explore it further, you can download the application directly",
+      description: "If you found this project useful or want to explore it further, you can download the application directly",
       button: "external",
       buttonText: "Go to Repository",
     },
@@ -52,5 +53,26 @@ export const bchmap = {
     "Lightweight and optimized front-end focused on simplicity and usability.",
   ],
   stack: ["React", "Leaflet.js", "NodeJs", "Tailwind"],
+  img: "../assets/bchmap-1.png",
+  imgfeatures: "",
   imgs: [""],
+  cards: [
+    {
+      icon: cardIcons.download,
+      url: "www.mapa.bcharg.com/",
+      title: "Try the app",
+      description: "If you found this project useful or want to explore it further, you can try application directly",
+      button: "external",
+      buttonText: "Go to App",
+    },
+    {
+      icon: cardIcons.community,
+      url: "bitcoincashargentina.com",
+      title: "Join the Community",
+      description:
+        "Want to connect with other members, ask questions, or get involved? Visit the Bitcoin Cash Argentina community and join the conversation.",
+      button: "external",
+      buttonText: "Visit Community",
+    },
+  ],
 };
