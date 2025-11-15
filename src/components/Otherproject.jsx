@@ -39,7 +39,7 @@ export default function OtherProject({
           </a>
         </div>
 
-        <img src={projectInfo.img} alt={projectInfo.name} className="h-56 md:h-60 object-contain rounded-lg" />
+        <img src={projectInfo.imgsmall} alt={projectInfo.name} className="h-56 md:h-60 object-contain rounded-lg" />
       </article>
     </RevealOnScroll>
   );
