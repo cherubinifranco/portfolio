@@ -16,8 +16,9 @@ export const beanIt = {
   ],
   stack: ["React", "Electron", "NodeJs", "Tailwind"],
   img: "../assets/beanit-1.png",
-  imgfeatures: "",
-  imgs: [""],
+  imgsmall: "../assets/beanit-1.png",
+  imgfeatures: "../assets/beanit-1.png",
+  imgs: [],
   cards: [
     {
       icon: cardIcons.code,
@@ -54,8 +55,9 @@ export const bchmap = {
   ],
   stack: ["React", "Leaflet.js", "NodeJs", "Tailwind"],
   img: "../assets/bchmap-1.png",
-  imgfeatures: "",
-  imgs: [""],
+  imgsmall: "../assets/bchmap-0.png",
+  imgfeatures: "../assets/bchmap-1.png",
+  imgs: [],
   cards: [
     {
       icon: cardIcons.download,
