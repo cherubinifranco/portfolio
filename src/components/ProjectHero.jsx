@@ -23,7 +23,7 @@ export default function ProjectHero({
 }) {
   return (
     <RevealOnScroll>
-      <section className="flex flex-col lg:flex-row w-full justify-between mt-1 md:mt-28 px-8 max-w-[1400px] mx-auto pb-10 text-white">
+      <section id="hero" className={`flex flex-col lg:flex-row w-full justify-between px-8 max-w-[1400px] mx-auto text-white ${bc ? " pt-1 md:pt-28" : "pt-8"}`}>
         <div className="flex flex-col justify-between p-4 lg:pr-10 w-full lg:w-1/2 gap-8">
           {bc && (
             <div className="ml-6 md:ml-0">

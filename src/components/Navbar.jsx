@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import { logoIcon } from "../files/icons";
 
-const links = [
+export default function Navbar({links = [
   { name: "Home", link: "#banner" },
   { name: "Work", link: "#timeline" },
   { name: "Projects", link: "#projects" },
-];
-
-export default function Navbar() {
+]}) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -45,9 +43,9 @@ export default function Navbar() {
           z-50
         "
       >
-        <a href="/" className="inline-flex items-center gap-2 text-white text-xl hover:text-mainacc transition">
+        <a href="/" className="inline-flex items-center gap-1  text-white text-xl hover:text-mainacc transition">
           {logoIcon}
-          Cheru
+          heru
         </a>
 
         <div className="flex gap-2">

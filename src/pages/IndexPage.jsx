@@ -15,7 +15,7 @@ export default function IndexPage() {
       <Navbar />
       <Banner />
       <TimeLine />
-      <h1 className="poppins font-semibold w-full text-center text-alwhite text-3xl mt-20">Featured Projects</h1>
+      <h1 id="projects" className="poppins font-semibold w-full text-center text-alwhite text-3xl pt-28">Featured Projects</h1>
       <ProjectHero bc={false} projectInfo={beanIt}/>
       <ProjectsContainer>
         <OtherProject projectInfo={bchmap} />
