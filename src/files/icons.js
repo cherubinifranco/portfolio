@@ -12,34 +12,24 @@ export const logoIcon = (
 );
 
 export const doublesquareIcon = (
-  <svg
-    width="25"
-    height="25"
-    viewBox="0 0 25 25"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0.5 8.90002V24.5H16.1V16.1H8.9V8.90002H0.5Z" fill="currentColor" stroke="currentColor" stroke-linejoin="round" />
+    <path d="M8.8999 0.5V8.9H16.0999V16.1H24.4999V0.5H8.8999Z" fill="currentColor" stroke="currentColor" stroke-linejoin="round" />
+  </svg>
+);
+
+export const arrowIcon = (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
     <path
-      d="M0.5 8.90002V24.5H16.1V16.1H8.9V8.90002H0.5Z"
+      d="M8.84574 2.44585C9.04577 2.24588 9.31703 2.13354 9.59987 2.13354C9.88271 2.13354 10.154 2.24588 10.354 2.44585L15.154 7.24585C15.354 7.44588 15.4663 7.71714 15.4663 7.99998C15.4663 8.28283 15.354 8.55409 15.154 8.75412L10.354 13.5541C10.1528 13.7484 9.88339 13.8559 9.60371 13.8535C9.32403 13.8511 9.0565 13.7389 8.85873 13.5411C8.66096 13.3434 8.54878 13.0758 8.54635 12.7961C8.54392 12.5165 8.65144 12.247 8.84574 12.0459L11.7332 9.06665H1.59987C1.31697 9.06665 1.04566 8.95427 0.845623 8.75423C0.645584 8.55419 0.533203 8.28288 0.533203 7.99998C0.533203 7.71709 0.645584 7.44578 0.845623 7.24574C1.04566 7.0457 1.31697 6.93332 1.59987 6.93332H11.7332L8.84574 3.95412C8.64577 3.75409 8.53343 3.48283 8.53343 3.19998C8.53343 2.91714 8.64577 2.64588 8.84574 2.44585Z"
       fill="currentColor"
-      stroke="currentColor"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M8.8999 0.5V8.9H16.0999V16.1H24.4999V0.5H8.8999Z"
-      fill="currentColor"
-      stroke="currentColor"
-      stroke-linejoin="round"
     />
   </svg>
 );
 
 export const homeIcon = (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-    <path
-      d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69ZM12 3L2 12H5V20H11V14H13V20H19V12H22"
-      fill="currentColor"
-    />
+    <path d="M12 5.69L17 10.19V18H15V12H9V18H7V10.19L12 5.69ZM12 3L2 12H5V20H11V14H13V20H19V12H22" fill="currentColor" />
   </svg>
 );
 
@@ -184,12 +174,7 @@ export const cardIcons = {
       />
       <defs>
         <clipPath id="clip0_593_25">
-          <rect
-            width="33"
-            height="33"
-            fill="white"
-            transform="translate(18 11)"
-          />
+          <rect width="33" height="33" fill="white" transform="translate(18 11)" />
         </clipPath>
       </defs>
     </svg>
