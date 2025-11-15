@@ -11,34 +11,49 @@ const CONTENT = {
 };
 export default function Banner() {
   return (
-    <section id="banner" className="w-full p-6">
+    <section id="banner" className="w-full">
       <div
-        className={
-          "flex flex-row justify-around items-center flex-wrap w-full h-[700px] bg-contain"
-        }
+        className="
+      flex flex-col lg:flex-row 
+      justify-center lg:justify-around 
+      items-center 
+      w-full h-[700px] 
+      bg-cover bg-center
+      px-6 lg:px-16
+    "
         style={{ backgroundImage: `url(${banner})` }}
       >
-        <div className="text-white z-10">
-          <div className="flex flex-row items-center">
+        {/* Text */}
+        <div className="text-white z-10 max-w-[700px] text-center lg:text-left drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
+          <div className="flex items-center justify-center lg:justify-start">
             <span className="h-[1px] w-8 bg-white"></span>
-            <p className="px-4">Hello, i'm</p>
+            <p className="px-4 tracking-wider">Hello, I'm</p>
           </div>
-          <h1 className="text-6xl max-w-[23ch] pb-8 poppins-semibold">
-            {CONTENT.title}
-          </h1>
-          <p className="text-sm max-w-[55ch] pb-2 font-normal">
-            {CONTENT.paragraph}
-          </p>
 
-          <div className="py-3">
-            <a className="inline-flex items-center gap-2 p-2 hover:text-mainacc transition duration-400" href="http://github.com/cherubinifranco" target="_blank">
+          <h1 className="text-5xl lg:text-6xl max-w-[23ch] pb-8 poppins-semibold">{CONTENT.title}</h1>
+
+          <p className="text-sm max-w-[55ch] pb-2 font-normal mx-auto lg:mx-0">{CONTENT.paragraph}</p>
+
+          <div className="py-3 flex justify-center lg:justify-start">
+            <a
+              className="inline-flex items-center gap-2 p-2 hover:text-mainacc transition duration-400"
+              href="https://github.com/cherubinifranco"
+              target="_blank"
+            >
               {icons.githubicon}
             </a>
-            <a className="inline-flex items-center gap-2 p-2 hover:text-mainacc transition duration-400" href="http://linkedin.com/in/cherubinifranco" target="_blank">
+            <a
+              className="inline-flex items-center gap-2 p-2 hover:text-mainacc transition duration-400"
+              href="https://linkedin.com/in/cherubinifranco"
+              target="_blank"
+            >
               {icons.linkedinIcon}
             </a>
-            <a className="inline-flex items-center gap-2 p-2 hover:text-mainacc transition duration-400" href="mailto:cherubini.franco@hotmail.com" target="_blank">
-              {icons.emailIcon} 
+            <a
+              className="inline-flex items-center gap-2 p-2 hover:text-mainacc transition duration-400"
+              href="mailto:cherubini.franco@hotmail.com"
+            >
+              {icons.emailIcon}
             </a>
           </div>
 
@@ -51,22 +66,6 @@ export default function Banner() {
           </a>
         </div>
       </div>
-      <div></div>
     </section>
-  );
-}
-
-function SocialLink({ href, icon, handle, className }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      className={
-        "inline-flex items-center gap-2 cursor-pointer py-4 hover:text-[" + +"]"
-      }
-    >
-      <div>{icon}</div>
-      <span>{handle}</span>
-    </a>
   );
 }
